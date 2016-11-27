@@ -5,6 +5,96 @@
 #include <conio.h>
 #include <locale.h>
 
+void comprar(char cliente[][]){
+  char destino[20];
+  int voo[6], opcao;
+  printf("Deseja comprar passagem para onde(Sao Paulo, Curitiba ou Rio de Janeiro): \n");
+  scanf("%s\n",destino);
+  if(destino =='Sao Paulo'){
+    printf("Horarios:\n");
+        printf("1-14:00 = 200,00 reais\n");
+        printf("2-20:00 = 250,00 reais\n");
+        system("pause");
+        printf("Qual horário deseja:");
+        scanf("%d\n"&opcao);
+          if(opcao==1){
+            voo[0] = cliente;
+          }
+          if(opcao==2){
+              voo[1] = cliente;
+            }
+  }
+
+  else if(destino == 'Curitiba'){
+    printf("Horarios:\n");
+       printf("1-13:00 = 300,00 reais\n");
+       printf("2-19:00 = 350,00 reais\n");
+       system("pause");
+      printf("Qual horário deseja:");
+       scanf("%d\n"&opcao);
+         if(opcao==1){
+           voo[2] = cliente;
+         }
+         if(opcao==2){
+             voo[3] = cliente;
+           }
+
+  }
+
+  else if(destino == 'Rio de Janeiro'){
+    printf("Horarios:\n");
+    printf("1-12:00 = 300,00 reais\n");
+    printf("2-18:00 = 250,00 reais\n");
+         system("pause");
+    printf("Qual horário deseja:");
+     scanf("%d\n"&opcao);
+       if(opcao==1){
+         voo[4] = cliente;
+       }
+       if(opcao==2){
+           voo[5] = cliente;
+         }
+  }
+  else{
+    printf("Não foi encontrado.\n");
+  }
+
+}
+
+case 2:
+
+  system("cls");
+    printf("\t\t%c-----------------------------------------------%c", 201, 187);
+    printf("\n\t\t  |  Consulta de voos - Black Airlines  |\n");
+    printf("\t\t%c-----------------------------------------------%c\n\n", 200, 188);
+    printf("1-Belo horizonte >> Sao paulo \n");
+    printf("2-Belo horizonte >> Curitiba\n");
+    printf("3-Belo horizonte >> Rio de Janeiro\n");
+    scanf("%d", &voo);
+    while (voo=1){
+    printf("Horarios:\n");
+    printf("14:00 = 200,00 reais\n");
+    printf("20:00 = 250,00 reais\n");
+    system("pause");
+    printf("digite 0 para retornar\n");
+
+    }
+
+      while (voo=2){
+    printf("Horarios:\n");
+    printf("13:00 = 300,00 reais\n");
+    printf("19:00 = 350,00 reais\n");
+     system("pause");
+       printf("digite 0 para retornar\n");
+    }
+     while (voo=3){
+    printf("Horarios:\n");
+    printf("12:00 = 300,00 reais\n");
+    printf("18:00 = 250,00 reais\n");
+     system("pause");
+       printf("digite 0 para retornar\n");
+    }
+    }
 
 int main() {
 char cliente [30][40], endereco[30][40];
@@ -58,7 +148,7 @@ case 1:
         fflush(stdin);
         scanf("%[^\n]s", &email[aux]);
 
-        printf("Digite o n�mero do cartao de credito para pagamento: ");
+        printf("Digite o n�mero do cartao de credito para pagamento: ");
         fflush(stdin);
         scanf("%d[^\n]s", &cartao[aux]);
         aux++;
@@ -99,4 +189,3 @@ case 1:
 
 
 }
-
